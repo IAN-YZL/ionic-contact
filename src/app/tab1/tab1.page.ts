@@ -35,4 +35,26 @@ export class Tab1Page {
 
     this.contacts.splice(i,1);
   }
+
+  async edit(i: number){
+
+    const editmodal = await this.modalController.create({
+      component: ModalPage,
+      componentProps: {
+        firstName: this.contacts[i].firstName,
+        lastName:this.contacts[i].lastName,
+        email:this.contacts[i].email,
+        }
+    });
+
+
+    editmodal.onDidDismiss()
+      .then((retval) => {
+        this.contacts[i].firstName = retval.data.firstName;
+        this.contacts[i].lastName = retval.data.lastName;
+        this.contacts[i].email = retval.data.email;
+    });
+      return editmodal.present();
+  }
+
 }
