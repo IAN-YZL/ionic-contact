@@ -1,5 +1,7 @@
 {
-  "name": "myApp",
-  "integrations": {},
+  "name": "contacts-list",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
