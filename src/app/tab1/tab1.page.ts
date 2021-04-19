@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -6,7 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  firstName:string;
+  lastName:string;
+  email:string;
+  contacts = [{firstName:'Fran',lastName:'Jipani',email:'f.jipani@griffith.edu.au'},
+  {firstName:'Fran2',lastName:'Jipani2',email:'f.jipani2@griffith.edu.au'},
+  {firstName:'Fran3',lastName:'Jipani3',email:'f.jipani3@griffith.edu.au'},
+  {firstName:'Fran4',lastName:'Jipani4',email:'f.jipani4@griffith.edu.au'}]
+  constructor(private modalController: ModalController){}
 
-  constructor() {}
-
+  async addContact(){
+  }
 }
