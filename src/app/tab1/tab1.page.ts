@@ -31,4 +31,8 @@ export class Tab1Page {
     return await modal.present();
   }
 
+  delete(i: number){
+
+    this.contacts.splice(i,1);
+  }
 }
